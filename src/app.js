@@ -9,7 +9,7 @@ import crypto from "crypto"
 const app = express()
 
 app.use(cors({
-  origin: 'https://task-management-frontend-sgq8.vercel.app', // allow your frontend origin
+  origin: 'https://s-taskmanagment.netlify.app/', // allow your frontend origin
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true // if using cookies or authentication headers
 }));
