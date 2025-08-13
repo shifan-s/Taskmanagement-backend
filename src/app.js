@@ -9,10 +9,11 @@ import crypto from "crypto"
 const app = express()
 
 app.use(cors({
-  origin: 'https://s-taskmanagment.netlify.app/', // allow your frontend origin
+  origin: 'https://s-taskmanagment.netlify.app', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true // if using cookies or authentication headers
+  credentials: true
 }));
+
 app.use(morgan())
 app.use(express.json())
 app.use(cookieParser())
