@@ -9,7 +9,7 @@ import crypto from "crypto"
 const app = express()
 
 app.use(cors({
-  origin: 'https://s-taskmanagment.netlify.app', 
+  origin: 'https://s-taskmanagment.netlify.app', n
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));

@@ -108,13 +108,11 @@ export const updateTask = async (req,res) => {
                 message : "please fill"
             })
         }
-
         const task = await Task.findByIdAndUpdate(
             req.params.tid,
             {...req.body,slug:slugify(name)},
             {new:true}
         )
-
         await task.save()
 
         res.status(201).json({
