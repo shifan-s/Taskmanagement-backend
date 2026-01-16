@@ -13,7 +13,7 @@ const taskSchema = new mongoose.Schema({
     },
     description : {
         type : String,
-        required : [true,"Product description is required"],
+        required : [true,"Task description is required"],
         trim : true,
         maxlength:[100,"description should not exceed 100 char"]
     },

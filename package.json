@@ -1,7 +1,7 @@
 {
   "name": "task-management-app",
   "version": "1.0.0",
-  "description": " Task Management Application with authentication",
+  "description": " TO-Do Application with authentication",
   "keywords": [
     "reactJS",
     "nodeJS",
@@ -21,6 +21,9 @@
     "dev": "concurrently \"npm run start\" \"npm run client\""
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.7",
     "bcrypt": "^6.0.0",
     "colors": "^1.4.0",
     "concurrently": "^9.2.0",

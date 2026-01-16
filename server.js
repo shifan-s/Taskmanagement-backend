@@ -23,3 +23,4 @@ const PORT = config.PORT
 app.listen(PORT , ()=>{
     console.log(`App is running at PORT :${PORT} successfully`.rainbow)
 })
+

@@ -8,6 +8,6 @@ router.post("/create-task",isLoggedIn,createTask)
 router.get("/all-tasks",getAllTasks)
 router.get("/single-task/:slug",getSingleTask)
 router.delete("/delete-task/:tid",isLoggedIn,deleteTask)
-router.put("/update-task/:tid",isLoggedIn,updateTask)
+router.put("/update-task/:slug",isLoggedIn,updateTask)
 
 export default router
