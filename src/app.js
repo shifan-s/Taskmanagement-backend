@@ -10,8 +10,8 @@ const app = express()
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://todo-management-frontend-ecru.vercel.app",
-    "https://todo-management-frontend-silk.vercel.app"
+    "https://to-d-management.netlify.app/",
+    "https://to-d-management.netlify.app/"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
