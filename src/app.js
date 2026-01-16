@@ -8,18 +8,12 @@ import crypto from "crypto"
 
 const app = express()
 const API = import.meta.env.VITE_API_URL;
-app.use(cors({
-  origin: [
-    "https://todo-management-frontend-ecru.vercel.app"
-  ],
-  credentials: true
-}));
-res.cookie("token", token, {
-  httpOnly: true,
-  secure: true,        // REQUIRED for https
-  sameSite: "None"     // REQUIRED for cross-site
-});
 
+app.use(cors({
+  origin: '"https://todo-management-frontend-ecru.vercel.ap', // allow your frontend origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true // if using cookies or authentication headers
+}));
 
 app.use(morgan())
 app.use(express.json())
