@@ -9,8 +9,6 @@ import crypto from "crypto"
 const app = express()
 app.use(cors({
   origin: [
-    "http://localhost:5173",
-    "https://to-d-management.netlify.app/",
     "https://to-d-management.netlify.app/"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
