@@ -4,27 +4,25 @@ import cors from "cors"
 import cookieParser from "cookie-parser"
 import authRoutes from "./routes/authRoutes.js"
 import taskRoutes from "./routes/taskRoutes.js"
-import crypto from "crypto"
 
 const app = express()
+
 app.use(cors({
   origin: "https://to-do-management.netlify.app",
-  credentials: true
-}));
-app.options("*", cors());
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}))
+
 app.use(morgan())
 app.use(express.json())
 app.use(cookieParser())
-app.use("/api/auth",authRoutes)
-app.use("/api/tasks",taskRoutes)
-//Generate secret key
-// const key = crypto.randomBytes(64).toString("hex")
-// console.log(key)
 
-app.get("/",(req,res)=>{
-    res.send("<h1>helloworld</h1>")
+app.use("/api/auth", authRoutes)
+app.use("/api/tasks", taskRoutes)
+
+app.get("/", (req, res) => {
+  res.send("<h1>helloworld</h1>")
 })
 
-
 export default app
-
